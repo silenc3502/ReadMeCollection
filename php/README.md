@@ -58,29 +58,29 @@ sudo a2enconf servername.conf
 sudo systemctl reload apache2
 ```
 
-#How to Run PHP-FPM with Apache
+# How to Run PHP-FPM with Apache
 
-##Disable the Apache PHP7.4 module.
+## Disable the Apache PHP7.4 module.
 ```make
 sudo a2dismod php7.4
 ```
 
-##Install PHP-FPM.
+## Install PHP-FPM.
 ```make
 sudo apt install php7.4-fpm
 ```
 
-##Enable proxy_fcgi and setenvif module.
+## Enable proxy_fcgi and setenvif module.
 ```make
 sudo a2enmod proxy_fcgi setenvif
 ```
 
-##Enable /etc/apache2/conf-available/php7.4-fpm.conf
+## Enable /etc/apache2/conf-available/php7.4-fpm.conf
 ```make
 sudo a2enconf php7.4-fpm
 ```
 
-##Restart Apache for the changes to take effect.
+## Restart Apache for the changes to take effect.
 ```make
 sudo systemctl restart apache2
 ```
