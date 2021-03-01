@@ -50,9 +50,10 @@ Finish
 ```
 
 ## Write Code
-```make
+
 main.c
 
+```c
 #include <avr/io.h>
 
 #define F_CPU       16000000L
@@ -74,4 +75,33 @@ int main(void)
 
     return 0;
 }
+```
+
+## Build
+```make
+Build -> Build
+
+There are no errors then it's OK!
+```
+
+## Go to hex file location
+```make
+cd ~/proj/avr/
+ls
+cd blink
+ls
+cd bin
+ls
+cd Release
+ls
+```
+
+## Construct the Circuit
+```make
+You need one led and one resistor more than 330 ohm.
+```
+
+## How to Download hex file to Hardware
+```make
+sudo avrdude-c avrisp2 -p m328p -U flash:w:blink.hex
 ```
