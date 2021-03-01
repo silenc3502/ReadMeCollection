@@ -103,5 +103,5 @@ You need one led and one resistor more than 330 ohm.
 
 ## How to Download hex file to Hardware
 ```make
-sudo avrdude-c avrisp2 -p m328p -U flash:w:blink.hex
+sudo avrdude -c avrisp2 -p m328p -U flash:w:blink.hex
 ```
